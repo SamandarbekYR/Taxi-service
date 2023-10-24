@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Car_service</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\images\avatar.jpg" />
+    <None Remove="Assets\images\DriverDashboardTaxi_m.jpg" />
+    <None Remove="Assets\images\DriverImage.jpg" />
+    <None Remove="Assets\images\DriverPicture.jpg" />
+    <None Remove="Assets\images\Login.jpg" />
+    <None Remove="Assets\images\Main.jpg" />
+    <None Remove="Assets\images\taxi.jpg" />
+    <None Remove="Assets\logos\taxi-servisce.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+   
+    
+ 
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    
+ 
+    <PackageReference Include="Microsoft.AspNet.SignalR.Core" Version="2.4.3" />
+
+    <PackageReference Include="Npgsql" Version="7.0.4" />
+   
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\images\avatar.jpg" />
+    <Resource Include="Assets\images\DriverDashboardTaxi_m.jpg" />
+    <Resource Include="Assets\images\DriverImage.jpg" />
+    <Resource Include="Assets\images\DriverPicture.jpg" />
+    <Resource Include="Assets\images\Main.jpg" />
+    <Resource Include="Assets\images\Login.jpg" />
+    <Resource Include="Assets\images\taxi.jpg" />
+    <Resource Include="Assets\logos\taxi-servisce.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\sounds\" />
+    <Folder Include="Entities\Machines\" />
+    <Folder Include="UserControl\" />
+  </ItemGroup>
+
+</Project>

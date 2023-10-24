@@ -1,0 +1,205 @@
+﻿<UserControl x:Class="Car_service.Components.DriverComponents.PassengersAgrree"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Car_service.Components.DriverComponents"
+             mc:Ignorable="d"
+             x:Name="PassengersAgreeUserControl"
+             Loaded="UserControl_Loaded"
+             d:DesignHeight="420" d:DesignWidth="330">
+  
+        <Border CornerRadius="25"  
+            Background="{DynamicResource ButtonColorSignIn}" 
+           Margin="15"
+            Width="300"
+            Height="365">
+
+            <StackPanel x:Name="infromationpanel"
+                    Grid.Column="0" 
+                   
+                    
+                    Background="Transparent"
+                    Height="330" Width="260" >
+                <Grid>
+
+                    <StackPanel Width="230" 
+                            Orientation="Horizontal" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left" 
+                            Margin="20 0 0 25">
+                        <Path Fill="NavajoWhite" 
+                          Data="{DynamicResource Booking}" 
+                          Stretch="Uniform"/>
+                        <TextBox x:Name="txtSoat" 
+                             Width="50" 
+                             BorderThickness="0 0 0 1" 
+                             Margin="10 0 0 0" 
+                             FontSize="12"
+                             Foreground="WhiteSmoke"
+                             IsReadOnly="True"
+                             BorderBrush="WhiteSmoke"/>
+
+
+
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal"
+                            Margin="15 50 0 0">
+                        <Path Fill="#8950FC"
+                          Data="{DynamicResource Positon}" 
+                          Stretch="Uniform" 
+                          Margin="0 0 12 0"/>
+                        <TextBox x:Name="txtPlace" 
+                             Width="75" 
+                             BorderThickness="0 0 0 1" 
+                             Margin="0 0 15 0" 
+                             Foreground="WhiteSmoke"
+                             IsReadOnly="True"
+                             BorderBrush="WhiteSmoke"/>
+
+
+                        <TextBox x:Name="txtplace1"
+                             Foreground="WhiteSmoke"
+                             Margin="10 0 10 0"
+                             Width="75"
+                             BorderBrush="WhiteSmoke"
+                             IsReadOnly="True">
+                        </TextBox>
+                        <Path Fill="#8950FC" Data="{DynamicResource Positon}"
+                           Stretch="Uniform"
+                            Margin="0 0 0 0">
+
+                        </Path>
+                    </StackPanel>
+                </Grid>
+                <!--Begin::Name-->
+                <TextBlock  Text="Name" 
+                        Foreground="WhiteSmoke" 
+                        FontSize="14" 
+                        HorizontalAlignment="Left"
+                        Margin="20 10 0 0">
+
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtName" 
+                         Style="{DynamicResource txtBox}" 
+                         Foreground="WhiteSmoke" 
+                         FontSize="14" 
+                         MaxLength="20"
+                         IsReadOnly="True"/>
+
+                    <Path  Fill="NavajoWhite" 
+                       Data="{DynamicResource User}" 
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform"  Margin="0 0 10 0"/>
+                </StackPanel>
+                <Border Style="{DynamicResource Border}" 
+                    BorderBrush="WhiteSmoke" 
+                    Width="220">
+
+                </Border>
+                <!--End::Name-->
+
+                <!--Begin::PhoneNumber-->
+                <TextBlock Text="Phone number"  
+                       Foreground="WhiteSmoke" 
+                       FontSize="14" 
+                       HorizontalAlignment="Left" 
+                       Margin="20 10 0 0"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtPhoneNumber" 
+                         Style="{DynamicResource txtBox}" 
+                         Foreground="WhiteSmoke" Width="200" 
+                         FontSize="14" MaxLength="13"
+                         IsReadOnly="True"/>
+
+                    <Path  Fill="Green" 
+                       Data="{DynamicResource Tell}" 
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform"  Margin="0 0 10 0"/>
+                </StackPanel>
+                <Border Style="{DynamicResource Border}"
+                    BorderBrush="WhiteSmoke"
+                    Width="220"/>
+
+                <TextBlock Text="There are passengers" 
+                       Foreground="WhiteSmoke" 
+                       FontSize="14"
+                       HorizontalAlignment="Left" />
+
+                <TextBox Width="25" 
+                     x:Name="txtThereArePassengres" 
+                     Style="{DynamicResource txtBox}" 
+                     Foreground="WhiteSmoke" 
+                     FontSize="14" 
+                     MaxLength="1"
+                     IsReadOnly="True">
+                </TextBox>
+
+                <Border  Style="{DynamicResource Border}" 
+                     Width="25" 
+                     BorderBrush="WhiteSmoke">
+
+                </Border>
+
+                <StackPanel Orientation="Horizontal" 
+                        Margin="15">
+
+                    <RadioButton x:Name="checkBoxMale" 
+                             Margin="0 0 0 0" 
+                            
+                             IsEnabled="False"/>
+
+                    <TextBlock Text="Male"  
+                           Foreground="WhiteSmoke" 
+                           FontSize="14"
+                           HorizontalAlignment="Left" 
+                           Margin="10 0 8 0" 
+                           />
+
+                    <Path  Fill="{DynamicResource PrimaryBackground}" 
+                       Data="{DynamicResource boy}" 
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform"  
+                       Margin="0 0 25 0"/>
+
+                    <RadioButton x:Name="checkBoxFeMale" 
+                             Margin="10 0 0 0"
+                             IsEnabled="False"/>
+
+                    <TextBlock Text="Female" 
+                           Foreground="WhiteSmoke" 
+                           FontSize="14" 
+                           HorizontalAlignment="Left" 
+                           Margin="10 0 10 0" />
+
+                    <Path  Fill="red" 
+                       Data="{DynamicResource girl}" 
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform" 
+                       Margin="0 0 10 0"/>
+                </StackPanel>
+
+                <Button Width="250" 
+                    Height="35" 
+                    Content="Delete" 
+                    Click="DeleteClick"
+                    Foreground="WhiteSmoke"
+                    
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Background="{DynamicResource ButtonColorSignUp}"
+                    BorderThickness="0"
+                    BorderBrush="Transparent">
+
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+
+
+</UserControl>

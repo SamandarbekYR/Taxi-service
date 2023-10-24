@@ -1,0 +1,177 @@
+﻿<UserControl x:Class="Car_service.Components.DrieverFriends.People"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Car_service.Components.DrieverFriends"
+             mc:Ignorable="d" 
+             x:Name="PopleControl"
+             Loaded="UserControl_Loaded"
+             d:DesignHeight="395" d:DesignWidth="330">
+          
+
+
+        <Border CornerRadius="25" 
+                Background="{DynamicResource PrimaryHueDarkBrush}" 
+                Margin="19 19 0 0"
+                Height="365"
+                Width="300">
+
+
+
+            <StackPanel x:Name="infromationpanel"
+                    Grid.Column="0" 
+                    Margin="20" 
+                    Background="{DynamicResource PrimaryHueDarkBrush}"
+                    Height="315" Width="250" >
+                <Grid>
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 0"
+                            Width="250" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Text="Id:"
+                               Margin="0 0 0 0"
+                               Foreground="WhiteSmoke">
+                        </TextBlock>
+                        <TextBox x:Name="txtDId"
+                             Width="20"
+                             Foreground="WhiteSmoke"
+                             BorderBrush="WhiteSmoke">
+                        </TextBox>
+
+                        <TextBox
+                             x:Name="txtScore"
+                             Width="20" 
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Center"
+                             Margin="140 0 0 0"
+                             BorderBrush="WhiteSmoke"
+                             Foreground="#F79B1C">
+                        </TextBox>
+                        <TextBlock Text=":Score"
+                               Margin="0 0 0 0"
+                               Foreground="WhiteSmoke">
+                        </TextBlock>
+
+                    </StackPanel>
+                    <Border 
+                                Height="90"
+                                Width="90"
+                                Padding="3"
+                                Background="Transparent"
+                                CornerRadius="100"
+                                DockPanel.Dock="Top"
+                                HorizontalAlignment="Left"
+                                Margin="20 40 0 0">
+
+                        <Ellipse >
+                            <Ellipse.Fill>
+                                <ImageBrush x:Name="DriverPicture" ImageSource="/Assets/images/avatar.jpg"
+                                        Stretch="UniformToFill"
+                                        />
+
+                            </Ellipse.Fill>
+                        </Ellipse>
+
+                    </Border>
+                    <StackPanel Width="130" 
+                            Orientation="Horizontal" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Right" 
+                            Margin="20 0 0 0"
+                            >
+
+
+                        <TextBox x:Name="txtPlace" 
+                             Width="75" 
+                             BorderThickness="0 0 0 1" 
+                             Margin="20 0 10 0" 
+                             Foreground="WhiteSmoke"
+                             IsReadOnly="True"
+                             BorderBrush="WhiteSmoke"/>
+
+                        <Path Fill="Yellow"
+                          Data="{DynamicResource Positon}" 
+                          Stretch="Uniform" 
+                          Margin="0 0 0 0">
+
+                        </Path>
+
+
+
+                    </StackPanel>
+                </Grid>
+                <!--Begin::Name-->
+                <TextBlock  Text="Name" 
+                        Foreground="WhiteSmoke" 
+                        FontSize="14" 
+                        HorizontalAlignment="Left"
+                        Margin="20 5 0 10">
+
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtName" 
+                         Style="{DynamicResource txtBox}" 
+                         Foreground="WhiteSmoke" 
+                         FontSize="12" 
+                         MaxLength="20"
+                         IsReadOnly="True"
+                         Margin="20 0 0 0"/>
+
+                <Path  Fill="#FC5B51" 
+                       Data="{DynamicResource User}" 
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform"  Margin="0 0 10 0"/>
+                </StackPanel>
+                <Border Style="{DynamicResource Border}" 
+                    BorderBrush="WhiteSmoke" 
+                    Width="220">
+
+                </Border>
+                <!--End::Name-->
+
+                <!--Begin::PhoneNumber-->
+                <TextBlock Text="Phone number"  
+                       Foreground="WhiteSmoke" 
+                       FontSize="14" 
+                       HorizontalAlignment="Left" 
+                       Margin="20 10 0 10"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtPhoneNumber" 
+                         Style="{DynamicResource txtBox}" 
+                         Foreground="WhiteSmoke" Width="200" 
+                         FontSize="12" MaxLength="13"
+                         IsReadOnly="True"
+                          Margin="20 0 0 0"/>
+
+                    <Path  Fill="Wheat" 
+                       Data="{DynamicResource Tell}" 
+                       VerticalAlignment="Center" 
+                       Stretch="Uniform"  Margin="0 0 10 0"/>
+                </StackPanel>
+                <Border Style="{DynamicResource Border}"
+                    BorderBrush="WhiteSmoke"
+                    Width="220"/>
+
+
+
+
+
+
+                <Button Width="250" 
+                    Height="35" 
+                    Content="Delete to favorites" 
+                    Click="DeleteButtonClick"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Margin="18 25 12 10"
+                    Background="{DynamicResource ButtonColorSignUp}"
+                    BorderBrush="Yellow">
+
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+
+
+</UserControl>

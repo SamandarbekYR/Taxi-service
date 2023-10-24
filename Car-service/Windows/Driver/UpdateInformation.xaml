@@ -1,0 +1,210 @@
+﻿<Window x:Class="Car_service.Windows.Driver.UpdateInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_service.Windows.Driver"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        WindowStyle="None"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        Height="650" Width="500"
+       >
+
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+            CornerRadius="12,12,0,0"
+            Background="#1D02D0">
+
+                <Grid Margin="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                        Background="{DynamicResource TopBackground}">
+                    </Border>
+
+                    <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center">
+                        <TextBlock Text="Update"
+                               Margin="5,0,0,0"
+                               Foreground="{DynamicResource TextColorLogIn}"
+                               FontSize="11"
+                               FontFamily="JetBrains Mono">
+
+                        </TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1"
+                            Orientation="Horizontal">
+                        <Button x:Name="btnExit" Click="Exit_click" Style="{DynamicResource ExitButton}"
+                            Margin="70,0,0,0">
+                        </Button>
+
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                    CornerRadius="0,0,0,12"
+                    Background="{DynamicResource PrimaryBackground}" Grid.ColumnSpan="2">
+
+
+                    <StackPanel Grid.Column="0" 
+                            Orientation="Vertical"
+                            Margin="0,0,0,0">
+                        <TextBlock Text="Photo of the driver" Style="{DynamicResource Label}"/>
+                        <Border x:Name="ImgDriver"
+                            Width="100"
+                            Height="100"
+                            HorizontalAlignment="Left"
+                            Margin="20,15,0,0"
+                            CornerRadius="10">
+
+                            <Border.Background>
+                                <ImageBrush x:Name="Driverimage" ImageSource="/Assets/images/DriverImage.jpg" >
+
+                                </ImageBrush>
+                            </Border.Background>
+                        </Border>
+                    <Button  x:Name="btnDriverPictureSelected"
+                            Style="{DynamicResource SaveButtonPicture}"
+                            Click="btnDriverPictureSelected_Click">
+
+                    </Button>
+
+                        <TextBlock Text="First name" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtDriverName" Style="{DynamicResource txtBox}" MaxLength="20"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock Text="Phone number" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtDriverPhoneNumber" Style="{DynamicResource txtBox}" MaxLength="13"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock  Text="Driver's license number" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtDriverPrava" Style="{DynamicResource txtBox}" MaxLength="9"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock  Text="City" Style="{DynamicResource Label}"/>
+
+
+                        <ComboBox  Style="{DynamicResource FormComboBox}" 
+                               x:Name="comboCity" 
+                               Height="42" Width="200"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="20 0 0 0" 
+                               Background="Transparent" >
+
+                            <ComboBoxItem >Andijon</ComboBoxItem>
+                            <ComboBoxItem >Farg'ona</ComboBoxItem>
+                            <ComboBoxItem>Namangan</ComboBoxItem>
+                        </ComboBox>
+
+                        <TextBlock  Text="Login" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtDriverLogin" Style="{DynamicResource txtBox}" MaxLength="20"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+
+                        <TextBlock  Text="Password" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtDriverPassword" Style="{DynamicResource txtBox}" MaxLength="20"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+
+
+
+
+
+
+
+
+
+                    </StackPanel>
+
+                </Border>
+
+                <Border Grid.Column="2"
+                    CornerRadius="0,0,12,0"
+                    Background="{DynamicResource PrimaryBackground}">
+                    <StackPanel Grid.Column="0" 
+                            Orientation="Vertical"
+                            Margin="0,0,0,0">
+
+                        <TextBlock Text="Photo of the car" Style="{DynamicResource Label}"/>
+                        <Border x:Name="ImgCar"
+                            Width="100"
+                            Height="100"
+                            HorizontalAlignment="Left"
+                            Margin="20,15,0,0"
+                            CornerRadius="10">
+
+                            <Border.Background>
+                                <ImageBrush x:Name="CarImage" ImageSource="/Assets/images/Login.jpg" >
+
+                                </ImageBrush>
+                            </Border.Background>
+                        </Border>
+                        <Button  x:Name="btnaCarPictureSelected"
+                             Margin="24,0,0,0"
+                             Style="{DynamicResource SaveButtonPicture}"
+                             Click="btnaCarPictureSelected_Click" />
+
+                        <TextBlock Text="Name" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtCarName" Style="{DynamicResource txtBox}" MaxLength="20"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock Text="Car_number" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtCarNumber" Style="{DynamicResource txtBox}" MaxLength="8"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock Text="Color" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtCarColor" Style="{DynamicResource txtBox}" MaxLength="8"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock Text="Texpasport seria" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtCarTexpasport" Style="{DynamicResource txtBox}" MaxLength="10"/>
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <TextBlock Text="Description" Style="{DynamicResource Label}"/>
+                        <TextBox x:Name="txtCarDescription" Style="{DynamicResource txtBox}"  MaxLength="30" />
+
+                        <Border Style="{DynamicResource Border}"/>
+
+                        <Button x:Name="SevaButton"
+                                Content="Update"
+                                Style="{DynamicResource SaveButton}"  
+                                Height="35"
+                                Cursor="Hand"
+                                Click="SevaButton_Click">
+
+
+
+
+                        </Button>
+
+                    </StackPanel>
+
+                </Border>
+            </Grid>
+
+        </Grid>
+ 
+
+
+
+</Window>
